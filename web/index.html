@@ -8,7 +8,7 @@
   <meta name='description'
     content=" Casinos | Bienvenue sur Notre nouveau Jeu de Dés, le premier arriver à 100 point remporte la mise ! Bonne chance.">
   <title>Casino | Jeu de Dés</title>
-  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+  <!--Ionic CSS style-->
   <!--Favicon-->
   <link rel="shortcut icon" type="image/ico" href="./assets/img/favicon.ico" />
   <!--Font Family Lato-->
@@ -26,9 +26,8 @@
     <h1><a href="index.html"> Welcome To Casino Live Dés </a></h1>
     <nav class="navbar p-0">
       <div class="navbar-wrapper">
-        <a href="#" class="navbar-item" id="newGame" data-bs-toggle="modal" data-bs-target="#game">Nouvelle
-          Partie</a>
-        <a href="#" class="rules navbar-item" data-bs-toggle="modal" data-bs-target="#rules">Règles</a>
+        <a href="#" class="navbar-item" id="newGame" data-bs-toggle="modal" data-bs-target="#game">Start New Game</a>
+        <a href="#" class="rules navbar-item" data-bs-toggle="modal" data-bs-target="#rules">Rules</a>
         <div class="right-col">
           <p>Music =></p>
           <img src="./assets/img/play.png" id="icon">
@@ -54,7 +53,7 @@
         </div>
       </div>
       <!-- Players 2 -->
-      <div class="player-1-panel">
+      <div class="player-1-panel active">
         <div class="player-name-1" id="name-1">Player 2</div>
         <div class="player-score" id="score-1">0</div>
         <div class="player-current-box">
@@ -84,7 +83,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h3 class="modal-title" id="modal-title">Nouvelle Partie</h3>
+          <h3 class="modal-title" id="modal-title">New Game</h3>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -104,31 +103,26 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success btn-new" data-bs-dismiss="modal">JOUER</button>
+          <button type="button" class="btn btn-success btn-new" data-bs-dismiss="modal">PLAY</button>
         </div>
       </div>
     </div>
   </div>
-
-
   <!-- Modal Rules -->
   <div class="modal fade modal-rules" id="rules" tabindex="-1" aria-labelledby="rules" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 class="modal-title modal-title-rules" id="rules-title">Règles</h3>
+        <h3 class="modal-title modal-title-rules" id="rules-title">GAME RULES:</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body modal-body-rules">
-        <h4><strong>But du jeu :</strong></h4>
-        <h5><strong>Le premier joueur qui atteint les 100 points a gagné !</strong></h5>
         <div class="rules-content">
-          <p>- Chaque joueur a un score temporaire et un score total.</p>
-          <p>- À chaque tour, vous lancez le dé autant de fois que vous le souhaitez.</p>
-          <p>- Quand vous souhaitez sécuriser votre score temporaire, cliquez sur HOLD pour ajouter votre score
-            temporaire au Total</p>
-          <p>- ATTENTION : si votre dé tombe sur le chiffre 1 et que vous n'avez pas ajoutez votre score, vous perdez le
-            score et ce sera au joueur suivant de jouer.</p>
-          <h4 class="goodluck">BONNE CHANCE !</h4>
+          <p>- The game has 2 players, playing in rounds</p>
+          <p>- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score</p>
+          <p>- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</p>
+          <p>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn</p>
+          <p>- The first player to reach 100 points on GLOBAL score wins the game</p>
+          <h4 class="goodluck">GOOD LUCK !</h4>
         </div>
       </div>
       <div class="modal-footer">
@@ -140,19 +134,11 @@
   <footer class="footer">
     <p> Copyright © 2022 Casino Live Dés </p>
   </footer>
-  <!-- POPPER-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
-    integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!--jQuery Cdn-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> 
   <!-- My Javascript-->
   <script src='./javascript/script.js'></script>
 </body>
-
 </html>
