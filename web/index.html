@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='description'
+    content=" Casinos | Bienvenue sur Notre nouveau Jeu de Dés, le premier arriver à 100 point remporte la mise ! Bonne chance.">
+  <title>Casino | Jeu de Dés</title>
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/ico" href="./assets/img/favicon.ico" />
+  <!--Font Family Lato-->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- My CSS File-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <h1><a href="index.html"> Welcome To Casino Live Dés </a></h1>
+    <nav class="navbar p-0">
+      <div class="navbar-wrapper">
+        <a href="#" class="navbar-item" id="newGame" data-bs-toggle="modal" data-bs-target="#game">Nouvelle
+          Partie</a>
+        <a href="#" class="rules navbar-item" data-bs-toggle="modal" data-bs-target="#rules">Règles</a>
+        <div class="right-col">
+          <p>Music =></p>
+          <img src="./assets/img/play.png" id="icon">
+        </div>
+        <audio id="mySong">
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/casinolivedes.appspot.com/o/las-vegas.mp3?alt=media&token=3dd5756a-0ad6-4941-9927-6eeb6bc0f4fd"
+            type="audio/mp3">
+        </audio>
+      </div>
+    </nav>
+  </header>
+  <!-- CONTAINER -->
+  <main class="container ">
+    <!-- Players 1 -->
+    <div class="wrapper clearfix">
+      <div class="player-0-panel active ">
+        <div class="player-name" id="name-0">Player 1</div>
+        <div class="player-score" id="score-0">0</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="current-0">0</div>
+        </div>
+      </div>
+      <!-- Players 2 -->
+      <div class="player-1-panel">
+        <div class="player-name-1" id="name-1">Player 2</div>
+        <div class="player-score" id="score-1">0</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="current-1">0</div>
+        </div>
+      </div>
+      <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+      <audio id="roll-dice">
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/casinolivedes.appspot.com/o/shake-and-roll-dice-soundbible.mp3?alt=media&token=c86526e2-fa10-447d-b761-abe5ab171626"
+          type="audio/mp3">
+      </audio>
+      <button class="btn-hold">
+        <i class="ion-ios-download-outline"></i>Hold
+      </button>
+      <audio id="clickMouse">
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/casinolivedes.appspot.com/o/click.mp3?alt=media&token=ecd5120b-ecaf-4da1-ac74-6647113e4652"
+          type="audio/mp3">
+      </audio>
+      <img src="./assets/img/dice-5.png" alt="Dice" class="dice" />
+    </div>
+  </main>
+  <!-- Modal New Game -->
+  <div class="modal fade modal-newgame" id="game" tabindex="-1" aria-labelledby="newGame" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title" id="modal-title">Nouvelle Partie</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Player1 -->
+          <div class="inputPlayers">
+            <div class="inputPlayer">
+              <label class="playerTitleUnLabel" for="playerTitleUnInput">Player 1</label>
+              <input type="text" id="playerTitleUnInput" name="playerTitleUnInput" placeholder="Entrez votre prénom"
+                onFocus="javascript:this.value=''">
+            </div>
+            <!-- Player2 -->
+            <div class="inputPlayer">
+              <label class="playerTitleDeuxLabel" for="playerTitleDeuxInput">Player 2</label>
+              <input type="text" id="playerTitleDeuxInput" name="playerTitleDeuxInput" placeholder="Entrez votre prénom"
+                onFocus="javascript:this.value=''">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-new" data-bs-dismiss="modal">JOUER</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Rules -->
+  <div class="modal fade modal-rules" id="rules" tabindex="-1" aria-labelledby="rules" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title modal-title-rules" id="rules-title">Règles</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body modal-body-rules">
+        <h4><strong>But du jeu :</strong></h4>
+        <h5><strong>Le premier joueur qui atteint les 100 points a gagné !</strong></h5>
+        <div class="rules-content">
+          <p>- Chaque joueur a un score temporaire et un score total.</p>
+          <p>- À chaque tour, vous lancez le dé autant de fois que vous le souhaitez.</p>
+          <p>- Quand vous souhaitez sécuriser votre score temporaire, cliquez sur HOLD pour ajouter votre score
+            temporaire au Total</p>
+          <p>- ATTENTION : si votre dé tombe sur le chiffre 1 et que vous n'avez pas ajoutez votre score, vous perdez le
+            score et ce sera au joueur suivant de jouer.</p>
+          <h4 class="goodluck">BONNE CHANCE !</h4>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-success close-rules" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p> Copyright © 2022 Casino Live Dés </p>
+  </footer>
+  <!-- POPPER-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
+    integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--jQuery Cdn-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- My Javascript-->
+  <script src='./javascript/script.js'></script>
+</body>
+
+</html>

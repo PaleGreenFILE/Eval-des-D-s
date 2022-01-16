@@ -1,0 +1,449 @@
+/* Basic Reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body,
+html {
+  font-size: 1.1rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url(../assets/img/dice-casino.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/**** ____HEADER____ ****/
+header {
+ font-family: 'Lato', sans-serif;
+ margin: 1.0rem 0 0;
+ text-decoration: none;
+}
+
+header a {
+  text-decoration: none;
+  margin: 0 0 1rem;
+  color: #2684d1;
+}
+
+header a:hover {
+  color: #db3e3e;
+
+}
+
+header p {
+    text-decoration: none;
+    margin: 0 0 1rem;
+    color: #2684d1;
+  }
+
+header p:hover {
+    color: #db3e3e;
+  
+  }
+
+h1 a {
+  text-shadow: 2px 0 #232931;
+  font-size: clamp(12px, 5vw, 8rem);
+  color: #254fd8;
+  text-align: center;
+  text-decoration: none;
+  z-index: 100;
+}
+
+/* Navbar */
+.navbar {
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.navbar-wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: #FFF;
+  font-size: clamp(1.1rem, 1.6vw, 2.2rem);
+  text-shadow: 1px 0 #232931;
+  margin: 0 1.1rem;
+}
+
+.navbar a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: all .5s ease;
+}
+
+.navbar a:hover:after {
+  width: 90%;
+  background: #f57b72;
+  transition: all .5s ease;
+}
+
+.navbar a:hover {
+  color: #f57b72;
+  transition: all .5s ease;
+}
+
+
+.navbar p:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: all .5s ease;
+  }
+  
+  .navbar p:hover:after {
+    width: 90%;
+    background: #f57b72;
+    transition: all .5s ease;
+  }
+  
+  .navbar p:hover {
+    color: #f57b72;
+    transition: all .5s ease;
+  }
+.right-col {
+    float: right;
+    margin-right: 6%;
+    display: flex;
+    align-items: center;
+
+}
+
+.right-col p{
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    margin-right: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+#icon {
+    width: 50px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/**********************************************
+*** GENERAL
+**********************************************/
+
+
+.wrapper {
+  width: 850px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(31, 58, 212);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+  width: 50%;
+  float: left;
+  height: 510px;
+  padding: 50px;
+}
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.player-name-1 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.player-score {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 100;
+  color: #eb4d4d;
+  margin-bottom: 130px;
+}
+
+.active {
+  background-color: #f7f7f7;
+}
+.active .player-name {
+  font-weight: 300;
+}
+
+.active .player-name::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
+  color: #eb4d4d;
+  top: -7px;
+  right: 10px;
+}
+
+.player-current-box {
+  background-color: #eb4d4d;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #222;
+}
+
+.player-current-score {
+  font-size: 30px;
+}
+
+.btn-roll,
+.btn-hold {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(8, 8, 8);
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 21px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 800;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  font-weight: 600;
+}
+button:hover i {
+  margin-right: 20px;
+}
+
+button:focus {
+  outline: none;
+}
+
+i {
+  color: #eb4d4d;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
+}
+
+.btn-new {
+  top: 305px;
+}
+.btn-roll {
+  top: 353px;
+}
+.btn-hold {
+  top: 407px;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 178px;
+  transform: translateX(-50%);
+  height: 100px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+.winner {
+  background-color: #f7f7f7;
+}
+.winner .player-name {
+  font-weight: 300;
+  color: #eb4d4d;
+}
+
+
+
+/**** MODALS ****/
+/* MODAL NEW GAME */
+.modal-header {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  z-index: 10;
+}
+
+.modal-title {
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  padding-top: 1rem;
+  text-align: center;
+  color: #f57b72;
+  z-index: 10;
+  pointer-events: none;
+  background-color: #1807b3; 
+}
+
+.modal-body {
+  text-align: center;
+  background-color: #1807b3;
+}
+
+#rules .modal-body {
+  pointer-events: none;
+  background-color: #1807b3;
+}
+
+.btn-close {
+  z-index: 10;
+  background-color: #efedfa;
+  margin-left: 20px;
+}
+
+.inputPlayers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.inputPlayer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+
+.btn-success {
+  background: #e62b0a;
+}
+
+.playerTitleUnLabel,
+.playerTitleDeuxLabel{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4ECCA3;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+#playerTitleUnInput,
+#playerTitleDeuxInput
+ {
+  border: 1px solid #4ECCA3;
+  font-size: 1rem;
+  text-align: center;
+  padding: 3px;
+  width: 200px;
+}
+
+
+.modal-footer {
+  justify-content: center;
+}
+
+/* Modal Rules */
+.modal-body-rules {
+  z-index: 10;
+  color: #f4f3fa;
+
+}
+.rules-content {
+  font-family: 'Lato', sans-serif;
+  margin-top: 2rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #f4f3fa;
+}
+
+
+/* FOOTER */
+footer {
+ font-style: bold;
+ font-size: 25px;
+ font-family: 'Lato', sans-serif;
+ color: rgb(255, 255, 255);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+footer p {
+  margin: 0;
+}
+
+/*________ MEDIAS QUERIES______ */
+/**********   DESKTOP  **********/
+@media screen and (min-width : 1000px) {
+  h1 {
+    text-shadow: 5px 0 #232931;
+  }
+
+  .players {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 3rem 0;
+  }
+
+  .navbar-item {
+    margin: 0 4rem;
+    
+  }
+}
