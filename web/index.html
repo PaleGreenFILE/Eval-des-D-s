@@ -8,7 +8,6 @@
   <meta name='description'
     content=" Casinos | Welcome at our  New Game Roll Dice, the first come at 100 point Win the game ! Good Luck.">
   <title>Casino | Roll Dice</title>
-  <!--Ionic CSS style-->
   <!--Favicon-->
   <link rel="shortcut icon" type="image/ico" href="./assets/img/favicon.ico" />
   <!--Font Family Lato-->
@@ -44,7 +43,7 @@
   <main class="container ">
     <!-- Players 1 -->
     <div class="wrapper clearfix">
-      <div class="player-0-panel active ">
+      <div class="player-0-panel active">
         <div class="player-name" id="name-0">Player 1</div>
         <div class="player-score" id="score-0">0</div>
         <div class="player-current-box">
@@ -53,7 +52,7 @@
         </div>
       </div>
       <!-- Players 2 -->
-      <div class="player-1-panel active">
+      <div class="player-1-panel">
         <div class="player-name-1" id="name-1">Player 2</div>
         <div class="player-score" id="score-1">0</div>
         <div class="player-current-box">
@@ -61,14 +60,14 @@
           <div class="player-current-score" id="current-1">0</div>
         </div>
       </div>
-      <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+      <button class="btn-roll" id="btn-hov">Roll dice</button>
       <audio id="roll-dice">
         <source
           src="https://firebasestorage.googleapis.com/v0/b/casinolivedes.appspot.com/o/shake-and-roll-dice-soundbible.mp3?alt=media&token=c86526e2-fa10-447d-b761-abe5ab171626"
           type="audio/mp3">
       </audio>
-      <button class="btn-hold">
-        <i class="ion-ios-download-outline"></i>Hold
+      <button class="btn-hold" id="btn-hover">
+        <ion-icon name="download-outline"></ion-icon>Hold
       </button>
       <audio id="clickMouse">
         <source
@@ -91,14 +90,13 @@
           <div class="inputPlayers">
             <div class="inputPlayer">
               <label class="playerTitleUnLabel" for="playerTitleUnInput">Player 1</label>
-              <input type="text" id="playerTitleUnInput" name="playerTitleUnInput" placeholder="Entrez votre prénom"
-                onFocus="javascript:this.value=''">
+              <input type="text" id="playerTitleUnInput" name="playerTitleUnInput" placeholder="Enter your Firstname">
             </div>
             <!-- Player2 -->
             <div class="inputPlayer">
               <label class="playerTitleDeuxLabel" for="playerTitleDeuxInput">Player 2</label>
-              <input type="text" id="playerTitleDeuxInput" name="playerTitleDeuxInput" placeholder="Entrez votre prénom"
-                onFocus="javascript:this.value=''">
+              <input type="text" id="playerTitleDeuxInput" name="playerTitleDeuxInput"
+                placeholder="Enter your Lastname">
             </div>
           </div>
         </div>
@@ -118,9 +116,11 @@
       <div class="modal-body modal-body-rules">
         <div class="rules-content">
           <p>- The game has 2 players, playing in rounds</p>
-          <p>- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score</p>
+          <p>- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+          </p>
           <p>- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</p>
-          <p>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn</p>
+          <p>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After
+            that, it's the next player's turn</p>
           <p>- The first player to reach 100 points on GLOBAL score wins the game</p>
           <h4 class="goodluck">GOOD LUCK !</h4>
         </div>
@@ -137,8 +137,11 @@
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script> 
+    crossorigin="anonymous"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <!-- My Javascript-->
   <script src='./javascript/script.js'></script>
 </body>
+
 </html>

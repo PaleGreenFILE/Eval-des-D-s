@@ -68,6 +68,16 @@ h1 a {
   text-decoration: none;
   z-index: 100;
 }
+ion-icon {
+  color: #eb4d4d;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
+}
 
 /* Navbar */
 .navbar {
@@ -260,29 +270,20 @@ h1 a {
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 800;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
   font-weight: 600;
+ 
 }
-button:hover i {
-  margin-right: 20px;
+.btn-roll,
+.btn-hold:hover {
+  margin: right 20px;
 }
+
 
 button:focus {
   outline: none;
-}
-
-i {
-  color: #eb4d4d;
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 32px;
-  line-height: 1;
-  vertical-align: text-top;
-  margin-top: -4px;
-  transition: margin 0.3s;
 }
 
 .btn-new {
