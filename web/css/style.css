@@ -68,6 +68,8 @@ h1 a {
   text-decoration: none;
   z-index: 100;
 }
+
+
 ion-icon {
   color: #eb4d4d;
   display: inline-block;
@@ -265,22 +267,20 @@ ion-icon {
   color: rgb(8, 8, 8);
   background: none;
   border: none;
-  font-family: Lato;
-  font-size: 21px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 button:hover {
-  font-weight: 600;
- 
-}
-.btn-roll,
-.btn-hold:hover {
-  margin: right 20px;
+  font-weight: 800;
 }
 
+button:hover ion-icon {
+  margin-right: 20px;
+}
 
 button:focus {
   outline: none;
