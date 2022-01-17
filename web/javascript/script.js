@@ -33,7 +33,6 @@ btnSound.onclick = function() {
 }
 
 
-
 // MODALS
 const playerTitleUnInput = document.getElementById('playerTitleUnInput');
 const playerTitleDeuxInput = document.getElementById('playerTitleDeuxInput');
@@ -89,9 +88,7 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
     if (dice !== 1) {
       // Add score
       roundScore += dice;
-      document.getElementById(
-        "current-" + activePlayer
-      ).textContent = roundScore;
+      document.getElementById( "current-" + activePlayer).textContent = roundScore;
     } else {
       // Next player
       nextPlayer();
@@ -106,19 +103,16 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
     scores[activePlayer] += roundScore;
 
     // Update the UI
-    document.querySelector("#score-" + activePlayer).textContent =
-      scores[activePlayer];
+    document.querySelector("#score-" + activePlayer).textContent = scores[activePlayer];
 
     // Check if player won the game
     if (scores[activePlayer] >= 100) {
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
-      document.querySelector(".dice").style.dispaly = "block";
-      document
-        .querySelector(".player-" + activePlayer + "-panel")
-        .classList.add("winner");
-      document
-        .querySelector(".player-" + activePlayer + "-panel")
-        .classList.remove("active");
+      document.querySelector(".dice").style.display = "block";
+      document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
+      document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
+      let winner = document.getElementById("winner");
+      winner.play();
       gamePlaying = false;
     } else {
       // Next player

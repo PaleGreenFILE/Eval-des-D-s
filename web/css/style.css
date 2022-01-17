@@ -237,6 +237,14 @@ ion-icon {
   top: -7px;
   right: 10px;
 }
+.active .player-name-1::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
+  color: #eb4d4d;
+  top: -7px;
+  right: 10px;
+}
 
 .player-current-box {
   background-color: #eb4d4d;
