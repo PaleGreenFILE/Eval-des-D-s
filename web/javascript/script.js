@@ -54,20 +54,6 @@ startGameButton.addEventListener("click", function() {
   }
 });
 
-//DICE
-const wrapper = document.querySelector('.wrapper');
-const dice = document.querySelector('.dice');
-const shadow = document.querySelector('.shadow');
-const front = document.querySelector('.front');
-const back = document.querySelector('.back');
-// DICE Animation
-const animationDiceLeft = document.querySelector('.animationDiceLeft');
-const animationShadowLeft = document.querySelector('.animationShadowLeft');
-const animationDiceRight = document.querySelector('.animationDiceRight');
-const animationShadowRight = document.querySelector('.animationShadowRight');
-const staticRotate = document.querySelector('.staticRotate');
-const staticShadow = document.querySelector('.staticShadow');
-
 // Start
 let scores, roundScore, activePlayer, gamePlaying;
 
