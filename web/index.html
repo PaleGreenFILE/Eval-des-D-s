@@ -23,24 +23,26 @@
   <!-- HEADER -->
   <header class="header">
     <h1><a href="index.html"> Welcome To Casino Live Dés </a></h1>
-    <nav class="navbar p-0">
-      <div class="navbar-wrapper">
-        <a href="#" class="navbar-item" id="newGame" data-bs-toggle="modal" data-bs-target="#game">Start New Game</a>
-        <a href="#" class="rules navbar-item" data-bs-toggle="modal" data-bs-target="#rules">Rules</a>
-        <div class="right-col">
-          <p>Music =></p>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="navbar-wrapper">
+          <a href="#" class="navbar-item" id="newGame" data-bs-toggle="modal" data-bs-target="#game">New Game</a>
+          <a href="#" class="rules navbar-item" data-bs-toggle="modal" data-bs-target="#rules">Rules</a>
+          <a href="#" class="navbar-item" data-bs-toggle="modal" data-bs-target="">Music =></a>
           <img src="./assets/img/play.png" id="icon">
+
+          <audio id="mySong">
+            <source
+              src="https://firebasestorage.googleapis.com/v0/b/casinolivedes.appspot.com/o/las-vegas.mp3?alt=media&token=3dd5756a-0ad6-4941-9927-6eeb6bc0f4fd"
+              type="audio/mp3">
+          </audio>
         </div>
-        <audio id="mySong">
-          <source
-            src="https://firebasestorage.googleapis.com/v0/b/casinolivedes.appspot.com/o/las-vegas.mp3?alt=media&token=3dd5756a-0ad6-4941-9927-6eeb6bc0f4fd"
-            type="audio/mp3">
-        </audio>
+      </div>
       </div>
     </nav>
   </header>
   <!-- CONTAINER -->
-  <main class="container ">
+  <main class="container row row-lg-4">
     <!-- Players 1 -->
     <div class="wrapper clearfix">
       <div class="player-0-panel active">
@@ -88,6 +90,8 @@
       <!--Img Dice-->
       <img src="./assets/img/dice-5.png" alt="Dice" class="dice" />
     </div>
+
+
   </main>
   <!-- Modal New Game -->
   <div class="modal fade modal-newgame" id="game" tabindex="-1" aria-labelledby="newGame" aria-hidden="true">
